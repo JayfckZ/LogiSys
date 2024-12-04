@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 
-class Pessoa:
+class Pessoa(models.Model):
     id = models.AutoField(unique=True, primary_key=True)
     nome = models.CharField(max_length=100)
     cpf = models.CharField(
